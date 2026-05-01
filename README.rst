@@ -1,107 +1,39 @@
-Python Template
-===============
+TaraQueue
+=========
 
-Repository template to bootstrap a Python project.
+Python queue abstraction layer.
 
-Benefits of this template
--------------------------
+.. image:: https://img.shields.io/badge/license-MIT-blue.svg
+   :target: https://github.com/taradix/taraqueue/blob/master/LICENSE
+   :alt: License
+.. image:: https://img.shields.io/pypi/v/taraqueue.svg
+   :target: https://pypi.python.org/pypi/taraqueue/
+   :alt: PyPI
+.. image:: https://img.shields.io/github/issues-raw/taradix/taraqueue.svg
+   :target: https://github.com/taradix/taraqueue/issues
+   :alt: Issues
 
-* Installs the expected Python version under ``.venv/``.
-* Installs Python dependencies also under ``.venv/``.
-* Pins dependency versions in ``uv.lock``.
-* Provides default template for pull requests.
-* Checks for syntax and format on pull requests.
-* Runs tests on pull requests.
-* Pushes documentation to GitHub pages also when creating tags.
-* Includes settings for editors and some specifically for VSCode.
+Requirements
+------------
 
-Creating a new repository
--------------------------
+You will need the following prerequisites to use taraqueue:
 
-To create the repository for a new project:
+- Python 3.12, 3.13, 3.14
 
-1. On `GitHub`_, navigate to the main page of this repository.
-2. Above the file list, click *Use this template*.
-3. Select *Create a new repository*.
-4. Follow the usual steps.
+Installation
+------------
 
-.. _GitHub: https://github.com/cr3
+To install taraqueue:
 
-Configuring the new repository
-------------------------------
+.. code-block:: bash
 
-In GitHub -> Settings:
+  $ pip install taraqueue
 
-1. General:
+Resources
+---------
 
-   * Uncheck ``Wikis``
-   * Uncheck ``Projects``
-   * Check ``Automatically delete head branches``
-
-2. Branch protection rules:
-
-   * Branch name pattern: ``main``
-   * Check ``Require a pull request before merging``
-   * Check ``Require review from Code Owners``
-   * Check ``Require status checks to pass before merging``
-   * Click on ``Create``
-
-3. Another branch protection rules:
-
-   * Branch name pattern: ``gh-pages``
-   * Check ``Allow force pushes``
-   * Click on ``Create``
-
-4. Create branch named ``gh-pages``.
-
-In the source:
-
-1. Rewrite this ``README.rst``.
-2. Update the ``LICENSE.rst``.
-3. Replace "changeme" with your project details in:
-
-   * ``docs/api.rst``
-   * ``docs/conf.py``
-   * ``docs/modules.rst``
-   * ``pyproject.toml``
-   * ``CONTRIBUTING.rst``
-
-4. Rename the directory "changeme" with your project name.
-
-Using the new repository
-------------------------
-
-1. ``make setup`` to setup the uv environment.
-2. ``make check`` to check syntax and formatting.
-3. ``make test`` to run tests.
-4. ``make docs`` to build documentation.
-5. ``uv add [package]`` to install ``[package]`` in ``.venv/``, add it in ``pyproject.toml`` and pin its version in ``uv.lock``.
-
-Maintaining the new repository
-------------------------------
-
-1. In the new repository, add the remote template repository - only needs to be done once:
-
-   .. code-block:: text
-
-      > git remote add template https://github.com/cr3/python-template.git
-
-2. Fetch the latest changes and review the log:
-
-   .. code-block:: text
-
-      > git fetch template
-      > git log template/main
-      ...
-
-3. Cherry pick each revision from the above log command:
-
-   .. code-block:: text
-
-      > git cherry-pick [revno]
-
-
-References
-----------
-
-* `Creating a repository from a template <https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template>`__
+- `Documentation <https://taradix.github.io/taraqueue/>`_
+- `Release Notes <http://github.com/taradix/taraqueue/blob/master/CHANGES.rst>`_
+- `Issue Tracker <http://github.com/taradix/taraqueue/issues>`_
+- `Source Code <http://github.com/taradix/taraqueue/>`_
+- `PyPi <https://pypi.org/project/taraqueue/>`_

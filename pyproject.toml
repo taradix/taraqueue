@@ -1,32 +1,53 @@
 [project]
-name = "changeme"
+name = "taraqueue"
 dynamic = ["version"]
-description = "changeme"
+description = "Python queue abstraction layer"
 authors = [
-    {name = "changeme", email = "changeme@changeme.com"},
+    {name = "Marc Tardif", email = "marc@taram.ca"},
 ]
 readme = "README.rst"
 requires-python = ">=3.12,<4.0"
+dependencies = [
+    "attrs>=26.1.0",
+    "yarl>=1.23.0",
+]
 
 [project.urls]
-Repository = "https://github.com/cr3/changeme"
+Repository = "https://github.com/taradix/taraqueue"
 
 [project.optional-dependencies]
 
+redis = [
+    "redis>=7.4.0",
+]
+
 test = [
-  "coverage>=7.2.3,<8.0.0",
-  "pytest>=9.0.0,<10.0.0",
+    "coverage>=7.2.3,<8.0.0",
+    "more-itertools>=11.0.1,<11.1.0",
+    "redis>=7.4.0",
+    "pytest>=9.0.0,<10.0.0",
+    "pytest-asyncio>=1.0.0,<2.0.0",
+    "pytest-unique>=0.1.8,<1.0.0",
+    "pytest-xdocker>=0.2.8,<1.0.0",
 ]
 
 check = [
-  "ruff>=0.15.0,<1.0.0",
+    "ruff>=0.15.0,<1.0.0",
 ]
 
 docs = [
-  "sphinx>=9.0.0,<10.0.0",
-  "sphinxcontrib-log-cabinet>=1.0.1,<2.0.0",
-  "sphinx-rtd-theme>=3.1.0,<3.2.0",
+    "sphinx>=9.0.0,<10.0.0",
+    "sphinxcontrib-log-cabinet>=1.0.1,<2.0.0",
+    "sphinx-rtd-theme>=3.1.0,<3.2.0",
 ]
+
+[project.entry-points."pytest11"]
+taraqueue-services = "taraqueue.testing.services"
+taraqueue-queue = "taraqueue.testing.queue"
+
+[project.entry-points."taraqueue"]
+memory = "taraqueue.queue:MemoryQueue"
+redis = "taraqueue.queue:RedisQueue"
 
 [build-system]
 requires = ["hatchling", "hatch-vcs"]
@@ -98,8 +119,9 @@ addopts = [
     "--doctest-modules",
     "--doctest-glob=*.rst",
 ]
+asyncio_mode = "auto"
 testpaths = [
-    "changeme",
+    "taraqueue",
     "docs",
     "tests",
 ]
@@ -108,7 +130,7 @@ testpaths = [
 #   https://coverage.readthedocs.io/en/latest/config.html
 [tool.coverage.paths]
 source = [
-    "changeme",
+    "taraqueue",
     "*/*/site-packages",
 ]
 
@@ -120,5 +142,5 @@ show_missing = true
 branch = true
 parallel = true
 source = [
-    "changeme",
+    "taraqueue",
 ]

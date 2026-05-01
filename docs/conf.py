@@ -8,9 +8,9 @@ from importlib.metadata import distribution
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = "changeme"
-copyright = "2025, changeme"  # noqa: A001
-author = "changeme"
+project = "taraqueue"
+copyright = "2026, Marc Tardif"  # noqa: A001
+author = "Marc Tardif"
 version = release = distribution(project).version
 
 # -- General configuration ---------------------------------------------------
