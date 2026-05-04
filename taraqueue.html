@@ -1,0 +1,367 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>taraqueue package &mdash; taraqueue 0.0.1.dev0+g61952dca1.d20260504 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=126188ae"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="How to contribute" href="contributing.html" />
+    <link rel="prev" title="taraqueue" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            taraqueue
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">taraqueue</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">taraqueue package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-taraqueue.queue">taraqueue.queue module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#taraqueue.queue.MemoryQueue"><code class="docutils literal notranslate"><span class="pre">MemoryQueue</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#taraqueue.queue.Queue"><code class="docutils literal notranslate"><span class="pre">Queue</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#taraqueue.queue.QueueEmpty"><code class="docutils literal notranslate"><span class="pre">QueueEmpty</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#taraqueue.queue.RedisQueue"><code class="docutils literal notranslate"><span class="pre">RedisQueue</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-taraqueue.registry">taraqueue.registry module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#taraqueue.registry.get_entry_points"><code class="docutils literal notranslate"><span class="pre">get_entry_points()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#taraqueue.registry.registry_add"><code class="docutils literal notranslate"><span class="pre">registry_add()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#taraqueue.registry.registry_get"><code class="docutils literal notranslate"><span class="pre">registry_get()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#taraqueue.registry.registry_load"><code class="docutils literal notranslate"><span class="pre">registry_load()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#taraqueue.registry.registry_remove"><code class="docutils literal notranslate"><span class="pre">registry_remove()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-taraqueue">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">How to contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="style_guide.html">Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changes.html">Changes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">taraqueue</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">taraqueue</a></li>
+      <li class="breadcrumb-item active">taraqueue package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/taraqueue.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="taraqueue-package">
+<h1>taraqueue package<a class="headerlink" href="#taraqueue-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-taraqueue.queue">
+<span id="taraqueue-queue-module"></span><h2>taraqueue.queue module<a class="headerlink" href="#module-taraqueue.queue" title="Link to this heading"></a></h2>
+<p>Queue abstraction and implementation.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="taraqueue.queue.MemoryQueue">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">taraqueue.queue.</span></span><span class="sig-name descname"><span class="pre">MemoryQueue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">NOTHING</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queues</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.queue.MemoryQueue" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#taraqueue.queue.Queue" title="taraqueue.queue.Queue"><code class="xref py py-class docutils literal notranslate"><span class="pre">Queue</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="taraqueue.queue.MemoryQueue.from_url">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">from_url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">URL</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#taraqueue.queue.MemoryQueue" title="taraqueue.queue.MemoryQueue"><span class="pre">MemoryQueue</span></a></span></span><a class="headerlink" href="#taraqueue.queue.MemoryQueue.from_url" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="taraqueue.queue.MemoryQueue.publish">
+<span class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">publish</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topic</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#taraqueue.queue.MemoryQueue.publish" title="Link to this definition"></a></dt>
+<dd><p>See <cite>Queue.publish</cite>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="taraqueue.queue.MemoryQueue.queues">
+<span class="sig-name descname"><span class="pre">queues</span></span><a class="headerlink" href="#taraqueue.queue.MemoryQueue.queues" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="taraqueue.queue.MemoryQueue.receive">
+<span class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">receive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#taraqueue.queue.MemoryQueue.receive" title="Link to this definition"></a></dt>
+<dd><p>See <cite>Queue.receive</cite>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="taraqueue.queue.MemoryQueue.subscribe">
+<span class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">subscribe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topic</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#taraqueue.queue.MemoryQueue.subscribe" title="Link to this definition"></a></dt>
+<dd><p>See <cite>Queue.subscribe</cite>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="taraqueue.queue.MemoryQueue.topics">
+<span class="sig-name descname"><span class="pre">topics</span></span><a class="headerlink" href="#taraqueue.queue.MemoryQueue.topics" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="taraqueue.queue.MemoryQueue.unsubscribe">
+<span class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">unsubscribe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topic</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#taraqueue.queue.MemoryQueue.unsubscribe" title="Link to this definition"></a></dt>
+<dd><p>See <cite>Queue.unsubscribe</cite>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="taraqueue.queue.Queue">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">taraqueue.queue.</span></span><span class="sig-name descname"><span class="pre">Queue</span></span><a class="headerlink" href="#taraqueue.queue.Queue" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>Base queue class.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="taraqueue.queue.Queue.connect">
+<span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topic</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.queue.Queue.connect" title="Link to this definition"></a></dt>
+<dd><p>Context manager that subscribes on entry and unsubscribes on exit.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="taraqueue.queue.Queue.from_url">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">from_url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">URL</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">registry</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#taraqueue.queue.Queue" title="taraqueue.queue.Queue"><span class="pre">Queue</span></a></span></span><a class="headerlink" href="#taraqueue.queue.Queue.from_url" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="taraqueue.queue.Queue.publish">
+<span class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span><span class="k"><span class="pre">async</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">publish</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topic</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#taraqueue.queue.Queue.publish" title="Link to this definition"></a></dt>
+<dd><p>Publish a message to a topic.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="taraqueue.queue.Queue.receive">
+<span class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span><span class="k"><span class="pre">async</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">receive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#taraqueue.queue.Queue.receive" title="Link to this definition"></a></dt>
+<dd><p>Listen for messages on the subscribed topics.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="taraqueue.queue.Queue.subscribe">
+<span class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span><span class="k"><span class="pre">async</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">subscribe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topic</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#taraqueue.queue.Queue.subscribe" title="Link to this definition"></a></dt>
+<dd><p>Subscribe to a topic before receiving messages.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="taraqueue.queue.Queue.unsubscribe">
+<span class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span><span class="k"><span class="pre">async</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">unsubscribe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topic</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#taraqueue.queue.Queue.unsubscribe" title="Link to this definition"></a></dt>
+<dd><p>Unsubscribe from a topic after receiving messages.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="taraqueue.queue.QueueEmpty">
+<span class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">taraqueue.queue.</span></span><span class="sig-name descname"><span class="pre">QueueEmpty</span></span><a class="headerlink" href="#taraqueue.queue.QueueEmpty" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Raised when the queue is empty.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="taraqueue.queue.RedisQueue">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">taraqueue.queue.</span></span><span class="sig-name descname"><span class="pre">RedisQueue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pubsub</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.queue.RedisQueue" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#taraqueue.queue.Queue" title="taraqueue.queue.Queue"><code class="xref py py-class docutils literal notranslate"><span class="pre">Queue</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="taraqueue.queue.RedisQueue.client">
+<span class="sig-name descname"><span class="pre">client</span></span><a class="headerlink" href="#taraqueue.queue.RedisQueue.client" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="taraqueue.queue.RedisQueue.from_env">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">from_env</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">env</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">environ({'ACCEPT_EULA':</span> <span class="pre">'Y',</span> <span class="pre">'ACTIONS_ORCHESTRATION_ID':</span> <span class="pre">'abb62a82-fd16-4d93-b06d-8498f189bee1.docs.__default',</span> <span class="pre">'ACTIONS_RUNNER_ACTION_ARCHIVE_CACHE':</span> <span class="pre">'/opt/actionarchivecache',</span> <span class="pre">'AGENT_TOOLSDIRECTORY':</span> <span class="pre">'/opt/hostedtoolcache',</span> <span class="pre">'ANDROID_HOME':</span> <span class="pre">'/usr/local/lib/android/sdk',</span> <span class="pre">'ANDROID_NDK':</span> <span class="pre">'/usr/local/lib/android/sdk/ndk/27.3.13750724',</span> <span class="pre">'ANDROID_NDK_HOME':</span> <span class="pre">'/usr/local/lib/android/sdk/ndk/27.3.13750724',</span> <span class="pre">'ANDROID_NDK_LATEST_HOME':</span> <span class="pre">'/usr/local/lib/android/sdk/ndk/29.0.14206865',</span> <span class="pre">'ANDROID_NDK_ROOT':</span> <span class="pre">'/usr/local/lib/android/sdk/ndk/27.3.13750724',</span> <span class="pre">'ANDROID_SDK_ROOT':</span> <span class="pre">'/usr/local/lib/android/sdk',</span> <span class="pre">'ANT_HOME':</span> <span class="pre">'/usr/share/ant',</span> <span class="pre">'AZURE_EXTENSION_DIR':</span> <span class="pre">'/opt/az/azcliextensions',</span> <span class="pre">'BOOTSTRAP_HASKELL_NONINTERACTIVE':</span> <span class="pre">'1',</span> <span class="pre">'CHROMEWEBDRIVER':</span> <span class="pre">'/usr/local/share/chromedriver-linux64',</span> <span class="pre">'CHROME_BIN':</span> <span class="pre">'/usr/bin/google-chrome',</span> <span class="pre">'CI':</span> <span class="pre">'true',</span> <span class="pre">'CONDA':</span> <span class="pre">'/usr/share/miniconda',</span> <span class="pre">'DEBIAN_FRONTEND':</span> <span class="pre">'noninteractive',</span> <span class="pre">'DOTNET_MULTILEVEL_LOOKUP':</span> <span class="pre">'0',</span> <span class="pre">'DOTNET_NOLOGO':</span> <span class="pre">'1',</span> <span class="pre">'DOTNET_SKIP_FIRST_TIME_EXPERIENCE':</span> <span class="pre">'1',</span> <span class="pre">'EDGEWEBDRIVER':</span> <span class="pre">'/usr/local/share/edge_driver',</span> <span class="pre">'ENABLE_RUNNER_TRACING':</span> <span class="pre">'true',</span> <span class="pre">'GECKOWEBDRIVER':</span> <span class="pre">'/usr/local/share/gecko_driver',</span> <span class="pre">'GHCUP_INSTALL_BASE_PREFIX':</span> <span class="pre">'/usr/local',</span> <span class="pre">'GITHUB_ACTION':</span> <span class="pre">'__run',</span> <span class="pre">'GITHUB_ACTIONS':</span> <span class="pre">'true',</span> <span class="pre">'GITHUB_ACTION_REF':</span> <span class="pre">'',</span> <span class="pre">'GITHUB_ACTION_REPOSITORY':</span> <span class="pre">'',</span> <span class="pre">'GITHUB_ACTOR':</span> <span class="pre">'cr3',</span> <span class="pre">'GITHUB_ACTOR_ID':</span> <span class="pre">'1476750',</span> <span class="pre">'GITHUB_API_URL':</span> <span class="pre">'https://api.github.com',</span> <span class="pre">'GITHUB_BASE_REF':</span> <span class="pre">'',</span> <span class="pre">'GITHUB_ENV':</span> <span class="pre">'/home/runner/work/_temp/_runner_file_commands/set_env_061d45ad-591d-4ee2-b226-ea4f013b2ba6',</span> <span class="pre">'GITHUB_EVENT_NAME':</span> <span class="pre">'release',</span> <span class="pre">'GITHUB_EVENT_PATH':</span> <span class="pre">'/home/runner/work/_temp/_github_workflow/event.json',</span> <span class="pre">'GITHUB_GRAPHQL_URL':</span> <span class="pre">'https://api.github.com/graphql',</span> <span class="pre">'GITHUB_HEAD_REF':</span> <span class="pre">'',</span> <span class="pre">'GITHUB_JOB':</span> <span class="pre">'docs',</span> <span class="pre">'GITHUB_OUTPUT':</span> <span class="pre">'/home/runner/work/_temp/_runner_file_commands/set_output_061d45ad-591d-4ee2-b226-ea4f013b2ba6',</span> <span class="pre">'GITHUB_PATH':</span> <span class="pre">'/home/runner/work/_temp/_runner_file_commands/add_path_061d45ad-591d-4ee2-b226-ea4f013b2ba6',</span> <span class="pre">'GITHUB_REF':</span> <span class="pre">'refs/tags/0.0.0',</span> <span class="pre">'GITHUB_REF_NAME':</span> <span class="pre">'0.0.0',</span> <span class="pre">'GITHUB_REF_PROTECTED':</span> <span class="pre">'false',</span> <span class="pre">'GITHUB_REF_TYPE':</span> <span class="pre">'tag',</span> <span class="pre">'GITHUB_REPOSITORY':</span> <span class="pre">'taradix/taraqueue',</span> <span class="pre">'GITHUB_REPOSITORY_ID':</span> <span class="pre">'1226869807',</span> <span class="pre">'GITHUB_REPOSITORY_OWNER':</span> <span class="pre">'taradix',</span> <span class="pre">'GITHUB_REPOSITORY_OWNER_ID':</span> <span class="pre">'276602703',</span> <span class="pre">'GITHUB_RETENTION_DAYS':</span> <span class="pre">'90',</span> <span class="pre">'GITHUB_RUN_ATTEMPT':</span> <span class="pre">'1',</span> <span class="pre">'GITHUB_RUN_ID':</span> <span class="pre">'25321128514',</span> <span class="pre">'GITHUB_RUN_NUMBER':</span> <span class="pre">'1',</span> <span class="pre">'GITHUB_SERVER_URL':</span> <span class="pre">'https://github.com',</span> <span class="pre">'GITHUB_SHA':</span> <span class="pre">'61952dca15505228bedcb42b6efc59249ddb65b5',</span> <span class="pre">'GITHUB_STATE':</span> <span class="pre">'/home/runner/work/_temp/_runner_file_commands/save_state_061d45ad-591d-4ee2-b226-ea4f013b2ba6',</span> <span class="pre">'GITHUB_STEP_SUMMARY':</span> <span class="pre">'/home/runner/work/_temp/_runner_file_commands/step_summary_061d45ad-591d-4ee2-b226-ea4f013b2ba6',</span> <span class="pre">'GITHUB_TRIGGERING_ACTOR':</span> <span class="pre">'cr3',</span> <span class="pre">'GITHUB_WORKFLOW':</span> <span class="pre">'Publish',</span> <span class="pre">'GITHUB_WORKFLOW_REF':</span> <span class="pre">'taradix/taraqueue/.github/workflows/publish.yml&#64;refs/tags/0.0.0',</span> <span class="pre">'GITHUB_WORKFLOW_SHA':</span> <span class="pre">'61952dca15505228bedcb42b6efc59249ddb65b5',</span> <span class="pre">'GITHUB_WORKSPACE':</span> <span class="pre">'/home/runner/work/taraqueue/taraqueue',</span> <span class="pre">'GOROOT_1_22_X64':</span> <span class="pre">'/opt/hostedtoolcache/go/1.22.12/x64',</span> <span class="pre">'GOROOT_1_23_X64':</span> <span class="pre">'/opt/hostedtoolcache/go/1.23.12/x64',</span> <span class="pre">'GOROOT_1_24_X64':</span> <span class="pre">'/opt/hostedtoolcache/go/1.24.13/x64',</span> <span class="pre">'GOROOT_1_25_X64':</span> <span class="pre">'/opt/hostedtoolcache/go/1.25.9/x64',</span> <span class="pre">'GRADLE_HOME':</span> <span class="pre">'/usr/share/gradle-9.4.1',</span> <span class="pre">'HOME':</span> <span class="pre">'/home/runner',</span> <span class="pre">'HOMEBREW_CLEANUP_PERIODIC_FULL_DAYS':</span> <span class="pre">'3650',</span> <span class="pre">'HOMEBREW_NO_AUTO_UPDATE':</span> <span class="pre">'1',</span> <span class="pre">'INVOCATION_ID':</span> <span class="pre">'7c18d4dfb2ce417a937f3918df448b73',</span> <span class="pre">'ImageOS':</span> <span class="pre">'ubuntu24',</span> <span class="pre">'ImageVersion':</span> <span class="pre">'20260413.86.1',</span> <span class="pre">'JAVA_HOME':</span> <span class="pre">'/usr/lib/jvm/temurin-17-jdk-amd64',</span> <span class="pre">'JAVA_HOME_11_X64':</span> <span class="pre">'/usr/lib/jvm/temurin-11-jdk-amd64',</span> <span class="pre">'JAVA_HOME_17_X64':</span> <span class="pre">'/usr/lib/jvm/temurin-17-jdk-amd64',</span> <span class="pre">'JAVA_HOME_21_X64':</span> <span class="pre">'/usr/lib/jvm/temurin-21-jdk-amd64',</span> <span class="pre">'JAVA_HOME_25_X64':</span> <span class="pre">'/usr/lib/jvm/temurin-25-jdk-amd64',</span> <span class="pre">'JAVA_HOME_8_X64':</span> <span class="pre">'/usr/lib/jvm/temurin-8-jdk-amd64',</span> <span class="pre">'JOURNAL_STREAM':</span> <span class="pre">'9:14601',</span> <span class="pre">'LANG':</span> <span class="pre">'C.UTF-8',</span> <span class="pre">'LD_LIBRARY_PATH':</span> <span class="pre">'/opt/hostedtoolcache/Python/3.12.13/x64/lib',</span> <span class="pre">'LOGNAME':</span> <span class="pre">'runner',</span> <span class="pre">'MAKEFLAGS':</span> <span class="pre">'',</span> <span class="pre">'MAKELEVEL':</span> <span class="pre">'1',</span> <span class="pre">'MEMORY_PRESSURE_WATCH':</span> <span class="pre">'/sys/fs/cgroup/system.slice/hosted-compute-agent.service/memory.pressure',</span> <span class="pre">'MEMORY_PRESSURE_WRITE':</span> <span class="pre">'c29tZSAyMDAwMDAgMjAwMDAwMAA=',</span> <span class="pre">'MFLAGS':</span> <span class="pre">'',</span> <span class="pre">'NVM_DIR':</span> <span class="pre">'/home/runner/.nvm',</span> <span class="pre">'PATH':</span> <span class="pre">'/home/runner/work/taraqueue/taraqueue/.venv/bin:/home/runner/work/_temp/uv-python-dir:/opt/hostedtoolcache/uv/0.11.8/x86_64:/home/runner/.local/bin:/opt/hostedtoolcache/Python/3.12.13/x64/bin:/opt/hostedtoolcache/Python/3.12.13/x64:/snap/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin',</span> <span class="pre">'PIPX_BIN_DIR':</span> <span class="pre">'/opt/pipx_bin',</span> <span class="pre">'PIPX_HOME':</span> <span class="pre">'/opt/pipx',</span> <span class="pre">'PKG_CONFIG_PATH':</span> <span class="pre">'/opt/hostedtoolcache/Python/3.12.13/x64/lib/pkgconfig',</span> <span class="pre">'POWERSHELL_DISTRIBUTION_CHANNEL':</span> <span class="pre">'GitHub-Actions-ubuntu24',</span> <span class="pre">'PSModulePath':</span> <span class="pre">'/root/.local/share/powershell/Modules:/usr/local/share/powershell/Modules:/opt/microsoft/powershell/7/Modules:/usr/share/az_14.6.0',</span> <span class="pre">'PWD':</span> <span class="pre">'/home/runner/work/taraqueue/taraqueue',</span> <span class="pre">'Python2_ROOT_DIR':</span> <span class="pre">'/opt/hostedtoolcache/Python/3.12.13/x64',</span> <span class="pre">'Python3_ROOT_DIR':</span> <span class="pre">'/opt/hostedtoolcache/Python/3.12.13/x64',</span> <span class="pre">'Python_ROOT_DIR':</span> <span class="pre">'/opt/hostedtoolcache/Python/3.12.13/x64',</span> <span class="pre">'RELEASE_VERSION':</span> <span class="pre">'0.0.0',</span> <span class="pre">'RUNNER_ARCH':</span> <span class="pre">'X64',</span> <span class="pre">'RUNNER_ENVIRONMENT':</span> <span class="pre">'github-hosted',</span> <span class="pre">'RUNNER_NAME':</span> <span class="pre">'GitHub</span> <span class="pre">Actions</span> <span class="pre">1000005731',</span> <span class="pre">'RUNNER_OS':</span> <span class="pre">'Linux',</span> <span class="pre">'RUNNER_TEMP':</span> <span class="pre">'/home/runner/work/_temp',</span> <span class="pre">'RUNNER_TOOL_CACHE':</span> <span class="pre">'/opt/hostedtoolcache',</span> <span class="pre">'RUNNER_TRACKING_ID':</span> <span class="pre">'github_c04cdad2-2413-4b61-8a5f-469d2a391b51',</span> <span class="pre">'RUNNER_WORKSPACE':</span> <span class="pre">'/home/runner/work/taraqueue',</span> <span class="pre">'SELENIUM_JAR_PATH':</span> <span class="pre">'/usr/share/java/selenium-server.jar',</span> <span class="pre">'SGX_AESM_ADDR':</span> <span class="pre">'1',</span> <span class="pre">'SHELL':</span> <span class="pre">'/bin/bash',</span> <span class="pre">'SHLVL':</span> <span class="pre">'1',</span> <span class="pre">'SWIFT_PATH':</span> <span class="pre">'/usr/share/swift/usr/bin',</span> <span class="pre">'SYSTEMD_EXEC_PID':</span> <span class="pre">'2083',</span> <span class="pre">'USER':</span> <span class="pre">'runner',</span> <span class="pre">'USE_BAZEL_FALLBACK_VERSION':</span> <span class="pre">'silent:',</span> <span class="pre">'UV':</span> <span class="pre">'/opt/hostedtoolcache/uv/0.11.8/x86_64/uv',</span> <span class="pre">'UV_CACHE_DIR':</span> <span class="pre">'/home/runner/work/_temp/setup-uv-cache',</span> <span class="pre">'UV_PYTHON':</span> <span class="pre">'3.12',</span> <span class="pre">'UV_PYTHON_INSTALL_DIR':</span> <span class="pre">'/home/runner/work/_temp/uv-python-dir',</span> <span class="pre">'UV_RUN_RECURSION_DEPTH':</span> <span class="pre">'1',</span> <span class="pre">'VCPKG_INSTALLATION_ROOT':</span> <span class="pre">'/usr/local/share/vcpkg',</span> <span class="pre">'VIRTUAL_ENV':</span> <span class="pre">'/home/runner/work/taraqueue/taraqueue/.venv',</span> <span class="pre">'XDG_CONFIG_HOME':</span> <span class="pre">'/home/runner/.config',</span> <span class="pre">'XDG_RUNTIME_DIR':</span> <span class="pre">'/run/user/1001',</span> <span class="pre">'_':</span> <span class="pre">'/usr/bin/make',</span> <span class="pre">'pythonLocation':</span> <span class="pre">'/opt/hostedtoolcache/Python/3.12.13/x64',</span> <span class="pre">'DOCUTILSCONFIG':</span> <span class="pre">'/home/runner/work/taraqueue/taraqueue/docs/docutils.conf'})</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#taraqueue.queue.RedisQueue" title="taraqueue.queue.RedisQueue"><span class="pre">RedisQueue</span></a></span></span><a class="headerlink" href="#taraqueue.queue.RedisQueue.from_env" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="taraqueue.queue.RedisQueue.from_host">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">from_host</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">host</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">6379</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#taraqueue.queue.RedisQueue" title="taraqueue.queue.RedisQueue"><span class="pre">RedisQueue</span></a></span></span><a class="headerlink" href="#taraqueue.queue.RedisQueue.from_host" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="taraqueue.queue.RedisQueue.from_url">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">from_url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">URL</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#taraqueue.queue.RedisQueue" title="taraqueue.queue.RedisQueue"><span class="pre">RedisQueue</span></a></span></span><a class="headerlink" href="#taraqueue.queue.RedisQueue.from_url" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="taraqueue.queue.RedisQueue.publish">
+<span class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">publish</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topic</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#taraqueue.queue.RedisQueue.publish" title="Link to this definition"></a></dt>
+<dd><p>See <cite>Queue.publish</cite>.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="taraqueue.queue.RedisQueue.pubsub">
+<span class="sig-name descname"><span class="pre">pubsub</span></span><a class="headerlink" href="#taraqueue.queue.RedisQueue.pubsub" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="taraqueue.queue.RedisQueue.receive">
+<span class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">receive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#taraqueue.queue.RedisQueue.receive" title="Link to this definition"></a></dt>
+<dd><p>See <cite>Queue.receive</cite>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="taraqueue.queue.RedisQueue.subscribe">
+<span class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">subscribe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topic</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#taraqueue.queue.RedisQueue.subscribe" title="Link to this definition"></a></dt>
+<dd><p>See <cite>Queue.subscribe</cite>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="taraqueue.queue.RedisQueue.unsubscribe">
+<span class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">unsubscribe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topic</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#taraqueue.queue.RedisQueue.unsubscribe" title="Link to this definition"></a></dt>
+<dd><p>See <cite>Queue.unsubscribe</cite>.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-taraqueue.registry">
+<span id="taraqueue-registry-module"></span><h2>taraqueue.registry module<a class="headerlink" href="#module-taraqueue.registry" title="Link to this heading"></a></h2>
+<p>Entry points based registry management.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="taraqueue.registry.get_entry_points">
+<span class="sig-prename descclassname"><span class="pre">taraqueue.registry.</span></span><span class="sig-name descname"><span class="pre">get_entry_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.registry.get_entry_points" title="Link to this definition"></a></dt>
+<dd><p>Get the list of pytest_unique entry points.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="taraqueue.registry.registry_add">
+<span class="sig-prename descclassname"><span class="pre">taraqueue.registry.</span></span><span class="sig-name descname"><span class="pre">registry_add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entry</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">registry</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.registry.registry_add" title="Link to this definition"></a></dt>
+<dd><p>Add an entry to a registry.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>group</strong> – Group of the entry.</p></li>
+<li><p><strong>name</strong> – Name of the entry.</p></li>
+<li><p><strong>entry</strong> – Entry to add.</p></li>
+<li><p><strong>registry</strong> – Optional registry to update.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A registry with the entry.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="taraqueue.registry.registry_get">
+<span class="sig-prename descclassname"><span class="pre">taraqueue.registry.</span></span><span class="sig-name descname"><span class="pre">registry_get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">registry</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.registry.registry_get" title="Link to this definition"></a></dt>
+<dd><p>Get an entry from a registry.</p>
+<p>If the registry is not defined or the group is not in the registry,
+the registry is loaded again.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>group</strong> – Group of the entry.</p></li>
+<li><p><strong>name</strong> – Name of the entry.</p></li>
+<li><p><strong>registry</strong> – Optional registry to get from.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>KeyError</strong> – If not found.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="taraqueue.registry.registry_load">
+<span class="sig-prename descclassname"><span class="pre">taraqueue.registry.</span></span><span class="sig-name descname"><span class="pre">registry_load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">registry</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.registry.registry_load" title="Link to this definition"></a></dt>
+<dd><p>Find all installed entry points.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="taraqueue.registry.registry_remove">
+<span class="sig-prename descclassname"><span class="pre">taraqueue.registry.</span></span><span class="sig-name descname"><span class="pre">registry_remove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">registry</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.registry.registry_remove" title="Link to this definition"></a></dt>
+<dd><p>Remove an entry from a registry.</p>
+<p>If the entry doesn’t exist, return silently.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>group</strong> – Group of the entry.</p></li>
+<li><p><strong>name</strong> – Name of the entry.</p></li>
+<li><p><strong>registry</strong> – Optional registry to update.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-taraqueue">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-taraqueue" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="taraqueue" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="contributing.html" class="btn btn-neutral float-right" title="How to contribute" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Marc Tardif.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,4 +1,0 @@
-services:
-  redis:
-    image: redis:8.6.2-alpine
-    command: redis-server --requirepass ${REDISPASS:-test}
