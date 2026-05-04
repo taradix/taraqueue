@@ -1,0 +1,279 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>taraqueue.testing package &mdash; taraqueue 0.3.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=e259d695"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="How to contribute" href="contributing.html" />
+    <link rel="prev" title="taraqueue package" href="taraqueue.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            taraqueue
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">taraqueue</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="taraqueue.html">taraqueue package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="taraqueue.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">taraqueue.testing package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="taraqueue.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="taraqueue.html#module-taraqueue.memory">taraqueue.memory module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="taraqueue.html#module-taraqueue.redis">taraqueue.redis module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="taraqueue.html#module-taraqueue.registry">taraqueue.registry module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="taraqueue.html#module-taraqueue">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">How to contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="style_guide.html">Style Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changes.html">Changes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">taraqueue</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">taraqueue</a></li>
+          <li class="breadcrumb-item"><a href="taraqueue.html">taraqueue package</a></li>
+      <li class="breadcrumb-item active">taraqueue.testing package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/taraqueue.testing.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="taraqueue-testing-package">
+<h1>taraqueue.testing package<a class="headerlink" href="#taraqueue-testing-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-taraqueue.testing.compose">
+<span id="taraqueue-testing-compose-module"></span><h2>taraqueue.testing.compose module<a class="headerlink" href="#module-taraqueue.testing.compose" title="Link to this heading"></a></h2>
+<p>Compose server module.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="taraqueue.testing.compose.ComposeServer">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">taraqueue.testing.compose.</span></span><span class="sig-name descname"><span class="pre">ComposeServer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pattern</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">project</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'test'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compose_files</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">180</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.compose.ComposeServer" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ProcessServer</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="taraqueue.testing.compose.ComposeServer.full_name">
+<span class="sig-name descname"><span class="pre">full_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.compose.ComposeServer.full_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="taraqueue.testing.compose.ComposeServer.prepare_func">
+<span class="sig-name descname"><span class="pre">prepare_func</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">controldir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.compose.ComposeServer.prepare_func" title="Link to this definition"></a></dt>
+<dd><p>Prepare the function to run the compose service.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="taraqueue.testing.compose.ComposeServer.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.compose.ComposeServer.run" title="Link to this definition"></a></dt>
+<dd><p>Return an <cite>ComposeService</cite> to the running service.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="taraqueue.testing.compose.ComposeService">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">taraqueue.testing.compose.</span></span><span class="sig-name descname"><span class="pre">ComposeService</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.compose.ComposeService" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Compose service.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – Name of the compose service container.</p></li>
+<li><p><strong>network</strong> – Network name to use when resolving the IP address.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="taraqueue.testing.compose.ComposeService.container">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">container</span></span><a class="headerlink" href="#taraqueue.testing.compose.ComposeService.container" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="taraqueue.testing.compose.ComposeService.container_id">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">container_id</span></span><a class="headerlink" href="#taraqueue.testing.compose.ComposeService.container_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="taraqueue.testing.compose.ComposeService.env">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">env</span></span><a class="headerlink" href="#taraqueue.testing.compose.ComposeService.env" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="taraqueue.testing.compose.ComposeService.ip">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">ip</span></span><a class="headerlink" href="#taraqueue.testing.compose.ComposeService.ip" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="taraqueue.testing.compose.ComposeService.name">
+<span class="sig-name descname"><span class="pre">name</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></span><a class="headerlink" href="#taraqueue.testing.compose.ComposeService.name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="taraqueue.testing.compose.ComposeService.network">
+<span class="sig-name descname"><span class="pre">network</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#taraqueue.testing.compose.ComposeService.network" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="taraqueue.testing.compose.ComposeService.started_at">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">started_at</span></span><a class="headerlink" href="#taraqueue.testing.compose.ComposeService.started_at" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-taraqueue.testing.queue">
+<span id="taraqueue-testing-queue-module"></span><h2>taraqueue.testing.queue module<a class="headerlink" href="#module-taraqueue.testing.queue" title="Link to this heading"></a></h2>
+<p>Queue fixtures.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="taraqueue.testing.queue.memory_queue">
+<span class="sig-prename descclassname"><span class="pre">taraqueue.testing.queue.</span></span><span class="sig-name descname"><span class="pre">memory_queue</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.queue.memory_queue" title="Link to this definition"></a></dt>
+<dd><p>Memory queue fixture.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="taraqueue.testing.queue.queue">
+<span class="sig-prename descclassname"><span class="pre">taraqueue.testing.queue.</span></span><span class="sig-name descname"><span class="pre">queue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.queue.queue" title="Link to this definition"></a></dt>
+<dd><p>Queue fixture.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="taraqueue.testing.queue.redis_queue">
+<span class="sig-prename descclassname"><span class="pre">taraqueue.testing.queue.</span></span><span class="sig-name descname"><span class="pre">redis_queue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">redis_service</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env_vars</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.queue.redis_queue" title="Link to this definition"></a></dt>
+<dd><p>Redis queue fixture.</p>
+</dd></dl>
+
+</section>
+<section id="module-taraqueue.testing.services">
+<span id="taraqueue-testing-services-module"></span><h2>taraqueue.testing.services module<a class="headerlink" href="#module-taraqueue.testing.services" title="Link to this heading"></a></h2>
+<p>Service fixtures.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="taraqueue.testing.services.compose_files">
+<span class="sig-prename descclassname"><span class="pre">taraqueue.testing.services.</span></span><span class="sig-name descname"><span class="pre">compose_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.services.compose_files" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="taraqueue.testing.services.compose_server">
+<span class="sig-prename descclassname"><span class="pre">taraqueue.testing.services.</span></span><span class="sig-name descname"><span class="pre">compose_server</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">project</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compose_files</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">process</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.services.compose_server" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="taraqueue.testing.services.env_file">
+<span class="sig-prename descclassname"><span class="pre">taraqueue.testing.services.</span></span><span class="sig-name descname"><span class="pre">env_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">env_vars</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.services.env_file" title="Link to this definition"></a></dt>
+<dd><p>Environment file containing <cite>env_vars</cite>.</p>
+<p>Cached for troubleshooting purposes.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="taraqueue.testing.services.env_vars">
+<span class="sig-prename descclassname"><span class="pre">taraqueue.testing.services.</span></span><span class="sig-name descname"><span class="pre">env_vars</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">project</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.services.env_vars" title="Link to this definition"></a></dt>
+<dd><p>Environment variables for the services.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="taraqueue.testing.services.project">
+<span class="sig-prename descclassname"><span class="pre">taraqueue.testing.services.</span></span><span class="sig-name descname"><span class="pre">project</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.services.project" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="taraqueue.testing.services.redis_client">
+<span class="sig-prename descclassname"><span class="pre">taraqueue.testing.services.</span></span><span class="sig-name descname"><span class="pre">redis_client</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">redis_service</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env_vars</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.services.redis_client" title="Link to this definition"></a></dt>
+<dd><p>Redis client to the service fixture.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="taraqueue.testing.services.redis_service">
+<span class="sig-prename descclassname"><span class="pre">taraqueue.testing.services.</span></span><span class="sig-name descname"><span class="pre">redis_service</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">compose_server</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.services.redis_service" title="Link to this definition"></a></dt>
+<dd><p>Redis service fixture.</p>
+</dd></dl>
+
+</section>
+<section id="module-taraqueue.testing">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-taraqueue.testing" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="taraqueue.html" class="btn btn-neutral float-left" title="taraqueue package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="contributing.html" class="btn btn-neutral float-right" title="How to contribute" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Marc Tardif.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
