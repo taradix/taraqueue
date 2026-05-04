@@ -20,7 +20,7 @@ def redis_queue(redis_service, env_vars):
         scheme="redis",
         host=redis_service.ip,
         port=6379,
-        password=env_vars["REDISPASS"],
+        password=env_vars["REDIS_PASSWORD"],
     )
     return Queue.from_url(url)
 

@@ -18,7 +18,7 @@ def env_vars(project):
     """Environment variables for the services."""
     return {
         "COMPOSE_PROJECT_NAME": project,
-        "REDISPASS": "test",
+        "REDIS_PASSWORD": "test",
     }
 
 
@@ -83,5 +83,5 @@ def redis_client(redis_service, env_vars):
         port=6379,
         decode_responses=True,
         db=0,
-        password=env_vars["REDISPASS"],
+        password=env_vars["REDIS_PASSWORD"],
     )
