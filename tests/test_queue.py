@@ -2,7 +2,7 @@
 
 import pytest
 
-from taraqueue.queue import QueueEmpty
+from taraqueue import QueueEmpty
 
 
 async def test_queue_send_receive(queue, unique):
