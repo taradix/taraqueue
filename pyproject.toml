@@ -46,8 +46,8 @@ taraqueue-services = "taraqueue.testing.services"
 taraqueue-queue = "taraqueue.testing.queue"
 
 [project.entry-points."taraqueue"]
-memory = "taraqueue.queue:MemoryQueue"
-redis = "taraqueue.queue:RedisQueue"
+memory = "taraqueue.memory:MemoryQueue"
+redis = "taraqueue.redis:RedisQueue"
 
 [build-system]
 requires = ["hatchling", "hatch-vcs"]

@@ -1,13 +1,29 @@
 taraqueue package
 =================
 
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   taraqueue.testing
+
 Submodules
 ----------
 
-taraqueue.queue module
+taraqueue.memory module
+-----------------------
+
+.. automodule:: taraqueue.memory
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+taraqueue.redis module
 ----------------------
 
-.. automodule:: taraqueue.queue
+.. automodule:: taraqueue.redis
    :members:
    :show-inheritance:
    :undoc-members:

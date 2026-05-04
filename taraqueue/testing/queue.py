@@ -3,7 +3,7 @@
 import pytest
 from yarl import URL
 
-from taraqueue.queue import Queue
+from taraqueue import Queue
 
 
 @pytest.fixture
