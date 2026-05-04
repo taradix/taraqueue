@@ -2,8 +2,8 @@
 
 from collections import defaultdict
 from contextlib import suppress
+from dataclasses import dataclass, field
 
-from attrs import define, field
 from yarl import URL
 
 from taraqueue import Queue, QueueEmpty
@@ -11,11 +11,11 @@ from taraqueue import Queue, QueueEmpty
 _global_memory_queues = defaultdict(list)
 
 
-@define
+@dataclass
 class MemoryQueue(Queue):
 
-    topics = field(factory=list)
-    queues = field(default=_global_memory_queues)
+    topics: list = field(default_factory=list)
+    queues: dict = field(default_factory=lambda: _global_memory_queues)
 
     @classmethod
     def from_url(cls, url: URL) -> "MemoryQueue":

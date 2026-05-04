@@ -2,8 +2,8 @@
 
 from abc import ABC, abstractmethod
 from contextlib import asynccontextmanager
+from dataclasses import dataclass
 
-from attrs import define
 from yarl import URL
 
 from taraqueue.registry import registry_load
@@ -13,7 +13,7 @@ class QueueEmpty(Exception):
     """Raised when the queue is empty."""
 
 
-@define
+@dataclass
 class Queue(ABC):
     """Base queue class."""
 

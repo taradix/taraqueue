@@ -1,16 +1,16 @@
 """Compose server module."""
 
 from contextlib import contextmanager
+from dataclasses import dataclass
 from datetime import datetime
 
-from attrs import define
 from more_itertools import only
 from pytest_xdocker.docker import DockerContainer
 from pytest_xdocker.process import ProcessData, ProcessServer
 from pytest_xdocker.xdocker import xdocker
 
 
-@define(frozen=True)
+@dataclass(frozen=True)
 class ComposeService:
     """Compose service.
 
