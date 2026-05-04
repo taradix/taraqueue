@@ -859,7 +859,6 @@ wheels = [
 name = "taraqueue"
 source = { editable = "." }
 dependencies = [
-    { name = "attrs" },
     { name = "yarl" },
 ]
 
@@ -887,7 +886,6 @@ test = [
 
 [package.metadata]
 requires-dist = [
-    { name = "attrs", specifier = ">=26.1.0" },
     { name = "coverage", marker = "extra == 'test'", specifier = ">=7.2.3,<8.0.0" },
     { name = "more-itertools", marker = "extra == 'test'", specifier = ">=11.0.1,<11.1.0" },
     { name = "pytest", marker = "extra == 'test'", specifier = ">=9.0.0,<10.0.0" },

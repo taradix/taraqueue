@@ -1,19 +1,21 @@
 """Redis queue implementation."""
 
 import os
+from dataclasses import dataclass, field
 from time import time
 
-from attrs import define, field
+from redis.asyncio import Redis
+from redis.asyncio.client import PubSub
 from yarl import URL
 
 from taraqueue import Queue, QueueEmpty
 
 
-@define
+@dataclass
 class RedisQueue(Queue):
 
-    client = field()
-    pubsub = field()
+    client: Redis = field()
+    pubsub: PubSub = field()
 
     @classmethod
     def from_env(cls, env=os.environ) -> "RedisQueue":
