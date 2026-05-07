@@ -1,3 +1,10 @@
+Version 0.4.0
+-------------
+
+Released 2026-05-07
+
+-   Namespace generic pytest fixtures.
+
 Version 0.3.0
 -------------
 

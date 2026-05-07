@@ -1,6 +1,5 @@
 """Service fixtures."""
 
-from functools import partial
 from pathlib import Path
 
 import pytest
@@ -9,35 +8,31 @@ from taraqueue.testing.compose import ComposeServer
 
 
 @pytest.fixture(scope="session")
-def project():
-    return "test"
-
-
-@pytest.fixture(scope="session")
-def env_vars(project):
+def taraqueue_env_vars():
     """Environment variables for the services."""
     return {
-        "COMPOSE_PROJECT_NAME": project,
+        "COMPOSE_PROJECT_NAME": "test",
         "REDIS_PASSWORD": "test",
     }
 
 
 @pytest.fixture(scope="session")
-def env_file(env_vars, request):
-    """Environment file containing `env_vars`.
+def taraqueue_env_file(taraqueue_env_vars, request):
+    """Environment file containing `taraqueue_env_vars`.
 
     Cached for troubleshooting purposes.
     """
     env_file = request.config.cache.makedir("compose") / "env"
     with env_file.open("w") as f:
-        for k, v in env_vars.items():
+        for k, v in taraqueue_env_vars.items():
             f.write(f"{k}={v}\n")
 
     return env_file
 
 
 @pytest.fixture(scope="session")
-def compose_files(request):
+def taraqueue_compose_files(request):
+    """Use the compose files from the project - not this library."""
     directory = Path(request.config.rootdir)
     filenames = ["docker-compose.yml", "compose.yaml", "compose.yml"]
     while True:
@@ -55,26 +50,20 @@ def compose_files(request):
 
 
 @pytest.fixture(scope="session")
-def compose_server(project, env_file, compose_files, process):
-    return partial(
-        ComposeServer,
-        project=project,
-        env_file=env_file,
-        compose_files=compose_files,
+def redis_service(process, taraqueue_env_file, taraqueue_compose_files):
+    """Redis service fixture."""
+    server = ComposeServer(
+        pattern="Ready to accept connections tcp",
+        env_file=taraqueue_env_file,
+        compose_files=taraqueue_compose_files,
         process=process,
     )
-
-
-@pytest.fixture(scope="session")
-def redis_service(compose_server):
-    """Redis service fixture."""
-    server = compose_server("Ready to accept connections tcp")
     with server.run("redis") as service:
         yield service
 
 
 @pytest.fixture(scope="session")
-def redis_client(redis_service, env_vars):
+def redis_client(redis_service, taraqueue_env_vars):
     """Redis client to the service fixture."""
     from redis import StrictRedis
 
@@ -83,5 +72,5 @@ def redis_client(redis_service, env_vars):
         port=6379,
         decode_responses=True,
         db=0,
-        password=env_vars["REDIS_PASSWORD"],
+        password=taraqueue_env_vars["REDIS_PASSWORD"],
     )

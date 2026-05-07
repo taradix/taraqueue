@@ -14,13 +14,13 @@ def memory_queue():
 
 
 @pytest.fixture
-def redis_queue(redis_service, env_vars):
+def redis_queue(redis_service, taraqueue_env_vars):
     """Redis queue fixture."""
     url = URL.build(
         scheme="redis",
         host=redis_service.ip,
         port=6379,
-        password=env_vars["REDIS_PASSWORD"],
+        password=taraqueue_env_vars["REDIS_PASSWORD"],
     )
     return Queue.from_url(url)
 
