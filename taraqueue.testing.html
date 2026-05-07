@@ -6,14 +6,14 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>taraqueue.testing package &mdash; taraqueue 0.3.0 documentation</title>
+  <title>taraqueue.testing package &mdash; taraqueue 0.4.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
 
   
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=e259d695"></script>
+      <script src="_static/documentation_options.js?v=6c02275b"></script>
       <script src="_static/doctools.js?v=fd6eb6e6"></script>
       <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="_static/js/theme.js"></script>
@@ -191,7 +191,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="taraqueue.testing.queue.redis_queue">
-<span class="sig-prename descclassname"><span class="pre">taraqueue.testing.queue.</span></span><span class="sig-name descname"><span class="pre">redis_queue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">redis_service</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env_vars</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.queue.redis_queue" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">taraqueue.testing.queue.</span></span><span class="sig-name descname"><span class="pre">redis_queue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">redis_service</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taraqueue_env_vars</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.queue.redis_queue" title="Link to this definition"></a></dt>
 <dd><p>Redis queue fixture.</p>
 </dd></dl>
 
@@ -200,43 +200,34 @@
 <span id="taraqueue-testing-services-module"></span><h2>taraqueue.testing.services module<a class="headerlink" href="#module-taraqueue.testing.services" title="Link to this heading"></a></h2>
 <p>Service fixtures.</p>
 <dl class="py function">
-<dt class="sig sig-object py" id="taraqueue.testing.services.compose_files">
-<span class="sig-prename descclassname"><span class="pre">taraqueue.testing.services.</span></span><span class="sig-name descname"><span class="pre">compose_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.services.compose_files" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="taraqueue.testing.services.compose_server">
-<span class="sig-prename descclassname"><span class="pre">taraqueue.testing.services.</span></span><span class="sig-name descname"><span class="pre">compose_server</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">project</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compose_files</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">process</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.services.compose_server" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="taraqueue.testing.services.env_file">
-<span class="sig-prename descclassname"><span class="pre">taraqueue.testing.services.</span></span><span class="sig-name descname"><span class="pre">env_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">env_vars</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.services.env_file" title="Link to this definition"></a></dt>
-<dd><p>Environment file containing <cite>env_vars</cite>.</p>
-<p>Cached for troubleshooting purposes.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="taraqueue.testing.services.env_vars">
-<span class="sig-prename descclassname"><span class="pre">taraqueue.testing.services.</span></span><span class="sig-name descname"><span class="pre">env_vars</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">project</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.services.env_vars" title="Link to this definition"></a></dt>
-<dd><p>Environment variables for the services.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="taraqueue.testing.services.project">
-<span class="sig-prename descclassname"><span class="pre">taraqueue.testing.services.</span></span><span class="sig-name descname"><span class="pre">project</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.services.project" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
 <dt class="sig sig-object py" id="taraqueue.testing.services.redis_client">
-<span class="sig-prename descclassname"><span class="pre">taraqueue.testing.services.</span></span><span class="sig-name descname"><span class="pre">redis_client</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">redis_service</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env_vars</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.services.redis_client" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">taraqueue.testing.services.</span></span><span class="sig-name descname"><span class="pre">redis_client</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">redis_service</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taraqueue_env_vars</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.services.redis_client" title="Link to this definition"></a></dt>
 <dd><p>Redis client to the service fixture.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="taraqueue.testing.services.redis_service">
-<span class="sig-prename descclassname"><span class="pre">taraqueue.testing.services.</span></span><span class="sig-name descname"><span class="pre">redis_service</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">compose_server</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.services.redis_service" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">taraqueue.testing.services.</span></span><span class="sig-name descname"><span class="pre">redis_service</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">process</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taraqueue_env_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taraqueue_compose_files</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.services.redis_service" title="Link to this definition"></a></dt>
 <dd><p>Redis service fixture.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="taraqueue.testing.services.taraqueue_compose_files">
+<span class="sig-prename descclassname"><span class="pre">taraqueue.testing.services.</span></span><span class="sig-name descname"><span class="pre">taraqueue_compose_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.services.taraqueue_compose_files" title="Link to this definition"></a></dt>
+<dd><p>Use the compose files from the project - not this library.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="taraqueue.testing.services.taraqueue_env_file">
+<span class="sig-prename descclassname"><span class="pre">taraqueue.testing.services.</span></span><span class="sig-name descname"><span class="pre">taraqueue_env_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">taraqueue_env_vars</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.services.taraqueue_env_file" title="Link to this definition"></a></dt>
+<dd><p>Environment file containing <cite>taraqueue_env_vars</cite>.</p>
+<p>Cached for troubleshooting purposes.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="taraqueue.testing.services.taraqueue_env_vars">
+<span class="sig-prename descclassname"><span class="pre">taraqueue.testing.services.</span></span><span class="sig-name descname"><span class="pre">taraqueue_env_vars</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.services.taraqueue_env_vars" title="Link to this definition"></a></dt>
+<dd><p>Environment variables for the services.</p>
 </dd></dl>
 
 </section>
