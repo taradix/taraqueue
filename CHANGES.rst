@@ -1,3 +1,10 @@
+Version 0.5.0
+-------------
+
+Released 2026-05-13
+
+-   Fix MemoryQueue to behave like RedisQueue.
+
 Version 0.4.0
 -------------
 

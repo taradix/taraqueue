@@ -1,14 +1,19 @@
 """Redis queue implementation."""
 
+from __future__ import annotations
+
 import os
 from dataclasses import dataclass, field
 from time import time
+from typing import TYPE_CHECKING
 
-from redis.asyncio import Redis
-from redis.asyncio.client import PubSub
 from yarl import URL
 
 from taraqueue import Queue, QueueEmpty
+
+if TYPE_CHECKING:
+    from redis.asyncio import Redis
+    from redis.asyncio.client import PubSub
 
 
 @dataclass
@@ -18,14 +23,14 @@ class RedisQueue(Queue):
     pubsub: PubSub = field()
 
     @classmethod
-    def from_env(cls, env=os.environ) -> "RedisQueue":
+    def from_env(cls, env=os.environ) -> RedisQueue:
         host = env.get("REDIS_SLAVEOF_IP", "") or env.get("IPV4_NETWORK", "172.22.1") + ".249"
         port = int(env.get("REDIS_SLAVEOF_PORT", "") or "6379")
         password = env.get("REDIS_PASSWORD")
         return cls.from_host(host, port, password=password)
 
     @classmethod
-    def from_host(cls, host: str, port: int = 6379, password: str | None = None) -> "RedisQueue":
+    def from_host(cls, host: str, port: int = 6379, password: str | None = None) -> RedisQueue:
         from redis.asyncio import StrictRedis
 
         client = StrictRedis(
@@ -39,7 +44,7 @@ class RedisQueue(Queue):
         return cls(client, pubsub)
 
     @classmethod
-    def from_url(cls, url: URL | str) -> "RedisQueue":
+    def from_url(cls, url: URL | str) -> RedisQueue:
         url = URL(url)
         return cls.from_host(url.host, url.port, password=url.password)
 
