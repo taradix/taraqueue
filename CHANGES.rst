@@ -1,3 +1,10 @@
+Version 0.6.0
+-------------
+
+Released 2026-05-22
+
+-   Add Amazon SQS queue.
+
 Version 0.5.0
 -------------
 

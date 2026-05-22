@@ -2,3 +2,8 @@ services:
   redis:
     image: redis:8.6.3-alpine
     command: redis-server --requirepass ${REDIS_PASSWORD:-test}
+
+  localstack:
+    image: localstack/localstack:4.5.1
+    environment:
+      - SERVICES=sqs,sns

@@ -74,3 +74,16 @@ def redis_client(redis_service, taraqueue_env_vars):
         db=0,
         password=taraqueue_env_vars["REDIS_PASSWORD"],
     )
+
+
+@pytest.fixture(scope="session")
+def localstack_service(process, taraqueue_env_file, taraqueue_compose_files):
+    """LocalStack service fixture."""
+    server = ComposeServer(
+        pattern="Ready.",
+        env_file=taraqueue_env_file,
+        compose_files=taraqueue_compose_files,
+        process=process,
+    )
+    with server.run("localstack") as service:
+        yield service

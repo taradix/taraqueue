@@ -25,10 +25,22 @@ def redis_queue(redis_service, taraqueue_env_vars):
     return Queue.from_url(url)
 
 
+@pytest.fixture
+def sqs_queue(localstack_service):
+    """SQS queue fixture backed by LocalStack."""
+    url = URL.build(
+        scheme="sqs",
+        host=localstack_service.ip,
+        port=4566,
+    )
+    return Queue.from_url(url)
+
+
 @pytest.fixture(
     params=[
         "memory_queue",
         "redis_queue",
+        "sqs_queue",
     ],
 )
 def queue(request):

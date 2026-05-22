@@ -28,6 +28,14 @@ taraqueue.redis module
    :show-inheritance:
    :undoc-members:
 
+taraqueue.sqs module
+--------------------
+
+.. automodule:: taraqueue.sqs
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
 taraqueue.registry module
 -------------------------
 
