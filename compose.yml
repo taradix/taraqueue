@@ -4,6 +4,6 @@ services:
     command: redis-server --requirepass ${REDIS_PASSWORD:-test}
 
   localstack:
-    image: localstack/localstack:2026.04.3
+    image: localstack/localstack:2026.05.0
     environment:
       - SERVICES=sqs,sns
