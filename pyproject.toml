@@ -20,14 +20,20 @@ redis = [
     "redis>=7.4.0",
 ]
 
+sqs = [
+    "aiobotocore>=2.21.0",
+]
+
 test = [
+    "aiobotocore>=2.21.0",
     "coverage>=7.2.3,<8.0.0",
+    "moto[sns,sqs,server]>=5.1.0",
     "more-itertools>=11.0.1,<11.1.0",
     "redis>=7.4.0",
     "pytest>=9.0.0,<10.0.0",
     "pytest-asyncio>=1.0.0,<2.0.0",
     "pytest-unique>=0.1.8,<1.0.0",
-    "pytest-xdocker>=0.2.8,<1.0.0",
+    "pytest-xdocker>=0.2.9,<1.0.0",
 ]
 
 check = [
@@ -47,6 +53,7 @@ taraqueue-queue = "taraqueue.testing.queue"
 [project.entry-points."taraqueue"]
 memory = "taraqueue.memory:MemoryQueue"
 redis = "taraqueue.redis:RedisQueue"
+sqs = "taraqueue.sqs:SQSQueue"
 
 [build-system]
 requires = ["hatchling", "hatch-vcs"]
@@ -110,6 +117,7 @@ ignore = [
 
 [tool.ruff.lint.per-file-ignores]
 "tests/*" = ["S101", "S106"]
+"taraqueue/testing/*" = ["S106", "S603"]
 
 # Pytest options:
 #   https://docs.pytest.org/en/6.2.x/reference.html#ini-options-ref
