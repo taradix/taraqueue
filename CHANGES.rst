@@ -1,3 +1,10 @@
+Version 0.6.2
+-------------
+
+Released 2026-05-22
+
+-   Revert to docker compose run instead of up.
+
 Version 0.6.1
 -------------
 
