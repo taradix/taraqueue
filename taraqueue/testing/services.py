@@ -22,7 +22,7 @@ def taraqueue_env_file(taraqueue_env_vars, request):
 
     Cached for troubleshooting purposes.
     """
-    env_file = request.config.cache.makedir("compose") / "env"
+    env_file = request.config.cache.makedir("taraqueue") / "env"
     with env_file.open("w") as f:
         for k, v in taraqueue_env_vars.items():
             f.write(f"{k}={v}\n")

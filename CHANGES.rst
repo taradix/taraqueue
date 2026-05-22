@@ -1,3 +1,10 @@
+Version 0.6.1
+-------------
+
+Released 2026-05-22
+
+-   Fix env file collision.
+
 Version 0.6.0
 -------------
 
