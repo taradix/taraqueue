@@ -6,14 +6,14 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>taraqueue.testing package &mdash; taraqueue 0.5.0 documentation</title>
+  <title>taraqueue.testing package &mdash; taraqueue 0.6.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
 
   
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=1dd76d02"></script>
+      <script src="_static/documentation_options.js?v=8fa8b3e9"></script>
       <script src="_static/doctools.js?v=fd6eb6e6"></script>
       <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="_static/js/theme.js"></script>
@@ -52,6 +52,7 @@
 <li class="toctree-l3"><a class="reference internal" href="taraqueue.html#submodules">Submodules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="taraqueue.html#module-taraqueue.memory">taraqueue.memory module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="taraqueue.html#module-taraqueue.redis">taraqueue.redis module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="taraqueue.html#module-taraqueue.sqs">taraqueue.sqs module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="taraqueue.html#module-taraqueue.registry">taraqueue.registry module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="taraqueue.html#module-taraqueue">Module contents</a></li>
 </ul>
@@ -184,6 +185,12 @@
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="taraqueue.testing.queue.moto_server">
+<span class="sig-prename descclassname"><span class="pre">taraqueue.testing.queue.</span></span><span class="sig-name descname"><span class="pre">moto_server</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.queue.moto_server" title="Link to this definition"></a></dt>
+<dd><p>Start a moto standalone server for AWS service mocking.</p>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="taraqueue.testing.queue.queue">
 <span class="sig-prename descclassname"><span class="pre">taraqueue.testing.queue.</span></span><span class="sig-name descname"><span class="pre">queue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.queue.queue" title="Link to this definition"></a></dt>
 <dd><p>Queue fixture.</p>
@@ -193,6 +200,12 @@
 <dt class="sig sig-object py" id="taraqueue.testing.queue.redis_queue">
 <span class="sig-prename descclassname"><span class="pre">taraqueue.testing.queue.</span></span><span class="sig-name descname"><span class="pre">redis_queue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">redis_service</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taraqueue_env_vars</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.queue.redis_queue" title="Link to this definition"></a></dt>
 <dd><p>Redis queue fixture.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="taraqueue.testing.queue.sqs_queue">
+<span class="sig-prename descclassname"><span class="pre">taraqueue.testing.queue.</span></span><span class="sig-name descname"><span class="pre">sqs_queue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">moto_server</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.queue.sqs_queue" title="Link to this definition"></a></dt>
+<dd><p>SQS queue fixture backed by moto server.</p>
 </dd></dl>
 
 </section>

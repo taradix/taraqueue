@@ -5,14 +5,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Index &mdash; taraqueue 0.5.0 documentation</title>
+  <title>Index &mdash; taraqueue 0.6.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
 
   
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=1dd76d02"></script>
+      <script src="_static/documentation_options.js?v=8fa8b3e9"></script>
       <script src="_static/doctools.js?v=fd6eb6e6"></script>
       <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="_static/js/theme.js"></script>
@@ -114,6 +114,10 @@
 <h2 id="E">E</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="taraqueue.html#taraqueue.sqs.SQSQueue.endpoint_url">endpoint_url (taraqueue.sqs.SQSQueue attribute)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="taraqueue.testing.html#taraqueue.testing.compose.ComposeService.env">env (taraqueue.testing.compose.ComposeService property)</a>
 </li>
   </ul></td>
@@ -132,6 +136,8 @@
         <li><a href="taraqueue.html#taraqueue.Queue.from_url">(taraqueue.Queue class method)</a>
 </li>
         <li><a href="taraqueue.html#taraqueue.redis.RedisQueue.from_url">(taraqueue.redis.RedisQueue class method)</a>
+</li>
+        <li><a href="taraqueue.html#taraqueue.sqs.SQSQueue.from_url">(taraqueue.sqs.SQSQueue class method)</a>
 </li>
       </ul></li>
   </ul></td>
@@ -176,6 +182,8 @@
 </li>
         <li><a href="taraqueue.html#module-taraqueue.registry">taraqueue.registry</a>
 </li>
+        <li><a href="taraqueue.html#module-taraqueue.sqs">taraqueue.sqs</a>
+</li>
         <li><a href="taraqueue.testing.html#module-taraqueue.testing">taraqueue.testing</a>
 </li>
         <li><a href="taraqueue.testing.html#module-taraqueue.testing.compose">taraqueue.testing.compose</a>
@@ -185,6 +193,10 @@
         <li><a href="taraqueue.testing.html#module-taraqueue.testing.services">taraqueue.testing.services</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="taraqueue.testing.html#taraqueue.testing.queue.moto_server">moto_server() (in module taraqueue.testing.queue)</a>
+</li>
   </ul></td>
 </tr></table>
 
@@ -211,6 +223,8 @@
         <li><a href="taraqueue.html#taraqueue.Queue.publish">(taraqueue.Queue method)</a>
 </li>
         <li><a href="taraqueue.html#taraqueue.redis.RedisQueue.publish">(taraqueue.redis.RedisQueue method)</a>
+</li>
+        <li><a href="taraqueue.html#taraqueue.sqs.SQSQueue.publish">(taraqueue.sqs.SQSQueue method)</a>
 </li>
       </ul></li>
   </ul></td>
@@ -246,6 +260,8 @@
 </li>
         <li><a href="taraqueue.html#taraqueue.redis.RedisQueue.receive">(taraqueue.redis.RedisQueue method)</a>
 </li>
+        <li><a href="taraqueue.html#taraqueue.sqs.SQSQueue.receive">(taraqueue.sqs.SQSQueue method)</a>
+</li>
       </ul></li>
       <li><a href="taraqueue.testing.html#taraqueue.testing.services.redis_client">redis_client() (in module taraqueue.testing.services)</a>
 </li>
@@ -256,6 +272,8 @@
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="taraqueue.html#taraqueue.redis.RedisQueue">RedisQueue (class in taraqueue.redis)</a>
+</li>
+      <li><a href="taraqueue.html#taraqueue.sqs.SQSQueue.region">region (taraqueue.sqs.SQSQueue attribute)</a>
 </li>
       <li><a href="taraqueue.html#taraqueue.registry.registry_add">registry_add() (in module taraqueue.registry)</a>
 </li>
@@ -273,14 +291,24 @@
 <h2 id="S">S</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="taraqueue.html#taraqueue.sqs.SQSQueue.session">session (taraqueue.sqs.SQSQueue attribute)</a>
+</li>
+      <li><a href="taraqueue.testing.html#taraqueue.testing.queue.sqs_queue">sqs_queue() (in module taraqueue.testing.queue)</a>
+</li>
+      <li><a href="taraqueue.html#taraqueue.sqs.SQSQueue">SQSQueue (class in taraqueue.sqs)</a>
+</li>
       <li><a href="taraqueue.testing.html#taraqueue.testing.compose.ComposeService.started_at">started_at (taraqueue.testing.compose.ComposeService property)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="taraqueue.html#taraqueue.memory.MemoryQueue.subscribe">subscribe() (taraqueue.memory.MemoryQueue method)</a>
 
       <ul>
         <li><a href="taraqueue.html#taraqueue.Queue.subscribe">(taraqueue.Queue method)</a>
 </li>
         <li><a href="taraqueue.html#taraqueue.redis.RedisQueue.subscribe">(taraqueue.redis.RedisQueue method)</a>
+</li>
+        <li><a href="taraqueue.html#taraqueue.sqs.SQSQueue.subscribe">(taraqueue.sqs.SQSQueue method)</a>
 </li>
       </ul></li>
   </ul></td>
@@ -318,14 +346,21 @@
 </li>
       </ul></li>
       <li>
+    taraqueue.sqs
+
+      <ul>
+        <li><a href="taraqueue.html#module-taraqueue.sqs">module</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
     taraqueue.testing
 
       <ul>
         <li><a href="taraqueue.testing.html#module-taraqueue.testing">module</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     taraqueue.testing.compose
 
@@ -365,6 +400,8 @@
         <li><a href="taraqueue.html#taraqueue.Queue.unsubscribe">(taraqueue.Queue method)</a>
 </li>
         <li><a href="taraqueue.html#taraqueue.redis.RedisQueue.unsubscribe">(taraqueue.redis.RedisQueue method)</a>
+</li>
+        <li><a href="taraqueue.html#taraqueue.sqs.SQSQueue.unsubscribe">(taraqueue.sqs.SQSQueue method)</a>
 </li>
       </ul></li>
   </ul></td>
