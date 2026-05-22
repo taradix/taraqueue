@@ -66,7 +66,6 @@ class ComposeServer(ProcessServer):
 
     def prepare_func(self, controldir):
         """Prepare the function to run the compose service."""
-        full_name = self.full_name(controldir.basename)
         compose = xdocker.compose().with_project_name(self.project)
         if env_file := self.env_file:
             compose = compose.with_env_file(env_file)
@@ -75,11 +74,8 @@ class ComposeServer(ProcessServer):
 
         command = (
             compose
-            .run(controldir.basename)
-            .with_name(full_name)
-            .with_build()
-            .with_remove()
-            .with_optionals("--use-aliases")
+            .up(controldir.basename)
+            .with_optionals("--no-deps")
         )
 
         return ProcessData(self.pattern, command, timeout=self.timeout)
