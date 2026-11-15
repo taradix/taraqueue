@@ -1,3 +1,8 @@
+Version 0.6.3
+-------------
+
+-   Add support for Python 3.15.
+
 Version 0.6.2
 -------------
 
