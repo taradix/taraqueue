@@ -4,14 +4,6 @@ taraqueue.testing package
 Submodules
 ----------
 
-taraqueue.testing.compose module
---------------------------------
-
-.. automodule:: taraqueue.testing.compose
-   :members:
-   :show-inheritance:
-   :undoc-members:
-
 taraqueue.testing.queue module
 ------------------------------
 

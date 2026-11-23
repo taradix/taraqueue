@@ -1,5 +1,5 @@
 version = 1
-revision = 5
+revision = 3
 requires-python = ">=3.12, <4.0"
 resolution-markers = [
     "python_full_version >= '3.13'",
@@ -1203,15 +1203,6 @@ wheels = [
 ]
 
 [[package]]
-name = "more-itertools"
-version = "11.2.1"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/52/b8/c63995bebbb9ac9c059350e0fb8c82c2420c85aeca7d34e40aecf3df9281/more_itertools-11.2.1.tar.gz", hash = "sha256:cbf08fd0af284dc69718b9b76a8e6203df624d70209ea511e4219d350c856f63", size = 154133, upload-time = "2026-10-14T18:50:30.407Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/5d/57/3c4b1c6f2e0cc29ba023802458ea3d2a996f87085559e4a5f2192d549532/more_itertools-11.2.1-py3-none-any.whl", hash = "sha256:35a7377edd1dd6608dcb2cdf534ded55ea32d49448875ad042cd3f879fb1ded0", size = 74405, upload-time = "2026-10-14T18:50:29.116Z" },
-]
-
-[[package]]
 name = "moto"
 version = "5.2.5"
 source = { registry = "https://pypi.org/simple" }
@@ -1861,7 +1852,7 @@ wheels = [
 
 [[package]]
 name = "pytest-xdocker"
-version = "0.3.0"
+version = "0.3.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "attrs" },
@@ -1872,9 +1863,9 @@ dependencies = [
     { name = "pytest-cache" },
     { name = "pytest-xprocess" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/a2/5a/a49fe7e4672fe5924a11f5bb91c42e08b5fc98c6b03284dbeb42b17257c8/pytest_xdocker-0.3.0.tar.gz", hash = "sha256:4f11ceb6b08a857665d74c79a18614ac1628be47815d478b8280c5d86cc92dc3", size = 118924, upload-time = "2026-11-22T22:57:55.334Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/61/13/bb55d08ec24283d11051acfd2f57f7e26a130b86a1cc3977e29429fa4813/pytest_xdocker-0.3.1.tar.gz", hash = "sha256:8196ee96fd8900276e0c52a7666d946508a3599e1f2203123680da40fd521af0", size = 105115, upload-time = "2026-11-23T01:50:05.032Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/00/b9/e55574773cc354dc20a2dab8d13abd6582f469829562b46c317ace4ae379/pytest_xdocker-0.3.0-py3-none-any.whl", hash = "sha256:f4ee6c987ace193c46fe3de326ac0c8ed83285da3379c09ed08a806e8c7ccb1e", size = 21769, upload-time = "2026-11-22T22:57:54.571Z" },
+    { url = "https://files.pythonhosted.org/packages/94/ee/347d8059de2590065890d68a348b9bdb4ba2963c83b24e673637ad68119a/pytest_xdocker-0.3.1-py3-none-any.whl", hash = "sha256:130667239588f877e92db16d5ab95ba06f648189e0e156123b2b5b0a9535fb7f", size = 21796, upload-time = "2026-11-23T01:50:03.833Z" },
 ]
 
 [[package]]
@@ -2342,23 +2333,23 @@ resolution-markers = [
     "python_full_version < '3.13'",
 ]
 dependencies = [
-    { name = "alabaster" },
-    { name = "babel" },
-    { name = "colorama", marker = "sys_platform == 'win32'" },
-    { name = "docutils" },
-    { name = "imagesize" },
-    { name = "jinja2" },
-    { name = "packaging" },
-    { name = "pygments" },
-    { name = "requests" },
-    { name = "roman-numerals" },
-    { name = "snowballstemmer" },
-    { name = "sphinxcontrib-applehelp" },
-    { name = "sphinxcontrib-devhelp" },
-    { name = "sphinxcontrib-htmlhelp" },
-    { name = "sphinxcontrib-jsmath" },
-    { name = "sphinxcontrib-qthelp" },
-    { name = "sphinxcontrib-serializinghtml" },
+    { name = "alabaster", marker = "python_full_version < '3.13'" },
+    { name = "babel", marker = "python_full_version < '3.13'" },
+    { name = "colorama", marker = "python_full_version < '3.13' and sys_platform == 'win32'" },
+    { name = "docutils", marker = "python_full_version < '3.13'" },
+    { name = "imagesize", marker = "python_full_version < '3.13'" },
+    { name = "jinja2", marker = "python_full_version < '3.13'" },
+    { name = "packaging", marker = "python_full_version < '3.13'" },
+    { name = "pygments", marker = "python_full_version < '3.13'" },
+    { name = "requests", marker = "python_full_version < '3.13'" },
+    { name = "roman-numerals", marker = "python_full_version < '3.13'" },
+    { name = "snowballstemmer", marker = "python_full_version < '3.13'" },
+    { name = "sphinxcontrib-applehelp", marker = "python_full_version < '3.13'" },
+    { name = "sphinxcontrib-devhelp", marker = "python_full_version < '3.13'" },
+    { name = "sphinxcontrib-htmlhelp", marker = "python_full_version < '3.13'" },
+    { name = "sphinxcontrib-jsmath", marker = "python_full_version < '3.13'" },
+    { name = "sphinxcontrib-qthelp", marker = "python_full_version < '3.13'" },
+    { name = "sphinxcontrib-serializinghtml", marker = "python_full_version < '3.13'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/fc/73/567727fc8c8d85bc3adc88a246e12937cfda8d565cf1d80e85bceaa61fe5/sphinx-9.1.1.tar.gz", hash = "sha256:48b627f02908f22c601b3ba9c7b17265b4f315dd05c8bc64cd4da41183f44fbc", size = 8725638, upload-time = "2026-10-20T00:41:13.96Z" }
 wheels = [
@@ -2373,23 +2364,23 @@ resolution-markers = [
     "python_full_version >= '3.13'",
 ]
 dependencies = [
-    { name = "alabaster" },
-    { name = "babel" },
-    { name = "colorama", marker = "sys_platform == 'win32'" },
-    { name = "docutils" },
-    { name = "imagesize" },
-    { name = "jinja2" },
-    { name = "packaging" },
-    { name = "pygments" },
-    { name = "requests" },
-    { name = "roman-numerals" },
-    { name = "snowballstemmer" },
-    { name = "sphinxcontrib-applehelp" },
-    { name = "sphinxcontrib-devhelp" },
-    { name = "sphinxcontrib-htmlhelp" },
-    { name = "sphinxcontrib-jsmath" },
-    { name = "sphinxcontrib-qthelp" },
-    { name = "sphinxcontrib-serializinghtml" },
+    { name = "alabaster", marker = "python_full_version >= '3.13'" },
+    { name = "babel", marker = "python_full_version >= '3.13'" },
+    { name = "colorama", marker = "python_full_version >= '3.13' and sys_platform == 'win32'" },
+    { name = "docutils", marker = "python_full_version >= '3.13'" },
+    { name = "imagesize", marker = "python_full_version >= '3.13'" },
+    { name = "jinja2", marker = "python_full_version >= '3.13'" },
+    { name = "packaging", marker = "python_full_version >= '3.13'" },
+    { name = "pygments", marker = "python_full_version >= '3.13'" },
+    { name = "requests", marker = "python_full_version >= '3.13'" },
+    { name = "roman-numerals", marker = "python_full_version >= '3.13'" },
+    { name = "snowballstemmer", marker = "python_full_version >= '3.13'" },
+    { name = "sphinxcontrib-applehelp", marker = "python_full_version >= '3.13'" },
+    { name = "sphinxcontrib-devhelp", marker = "python_full_version >= '3.13'" },
+    { name = "sphinxcontrib-htmlhelp", marker = "python_full_version >= '3.13'" },
+    { name = "sphinxcontrib-jsmath", marker = "python_full_version >= '3.13'" },
+    { name = "sphinxcontrib-qthelp", marker = "python_full_version >= '3.13'" },
+    { name = "sphinxcontrib-serializinghtml", marker = "python_full_version >= '3.13'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/64/d4/413466f0be8b1cb0e3e43893a148b96d7462d0923d82b4166b21afc5f30c/sphinx-9.2.0.tar.gz", hash = "sha256:90470459f3cab15d9dfed146c71cf77694b0445df17b2e0e69059cb9f7fc9ee4", size = 8782438, upload-time = "2026-10-21T00:05:15.019Z" }
 wheels = [
@@ -2529,7 +2520,6 @@ sqs = [
 test = [
     { name = "aiobotocore" },
     { name = "coverage" },
-    { name = "more-itertools" },
     { name = "moto", extra = ["server"] },
     { name = "pytest" },
     { name = "pytest-asyncio" },
@@ -2543,12 +2533,11 @@ requires-dist = [
     { name = "aiobotocore", marker = "extra == 'sqs'", specifier = ">=2.21.0" },
     { name = "aiobotocore", marker = "extra == 'test'", specifier = ">=2.21.0" },
     { name = "coverage", marker = "extra == 'test'", specifier = ">=7.2.3,<8.0.0" },
-    { name = "more-itertools", marker = "extra == 'test'", specifier = ">=11.2.0,<11.3.0" },
     { name = "moto", extras = ["server", "sns", "sqs"], marker = "extra == 'test'", specifier = ">=5.1.0" },
     { name = "pytest", marker = "extra == 'test'", specifier = ">=9.0.0,<10.0.0" },
     { name = "pytest-asyncio", marker = "extra == 'test'", specifier = ">=1.0.0,<2.0.0" },
     { name = "pytest-unique", marker = "extra == 'test'", specifier = ">=0.1.8,<1.0.0" },
-    { name = "pytest-xdocker", marker = "extra == 'test'", specifier = ">=0.2.9,<1.0.0" },
+    { name = "pytest-xdocker", marker = "extra == 'test'", specifier = ">=0.3.1,<1.0.0" },
     { name = "redis", marker = "extra == 'redis'", specifier = ">=7.4.0" },
     { name = "redis", marker = "extra == 'test'", specifier = ">=7.4.0" },
     { name = "ruff", marker = "extra == 'check'", specifier = ">=0.15.0,<1.0.0" },

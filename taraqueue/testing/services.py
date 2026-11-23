@@ -1,10 +1,7 @@
 """Service fixtures."""
 
-from pathlib import Path
-
 import pytest
-
-from taraqueue.testing.compose import ComposeServer
+from pytest_xdocker.compose import ComposeServer, find_compose_files
 
 
 @pytest.fixture(scope="session")
@@ -33,20 +30,7 @@ def taraqueue_env_file(taraqueue_env_vars, request):
 @pytest.fixture(scope="session")
 def taraqueue_compose_files(request):
     """Use the compose files from the project - not this library."""
-    directory = Path(request.config.rootdir)
-    filenames = ["docker-compose.yml", "compose.yaml", "compose.yml"]
-    while True:
-        for filename in filenames:
-            path = directory / filename
-            if path.exists():
-                all_files = directory.glob(f"{path.stem}.*")
-                ordered_files = sorted(all_files, key=lambda p: len(p.name))
-                return list(ordered_files)
-
-        if directory == directory.parent:
-            raise FileNotFoundError("Docker compose file not found")
-
-        directory = directory.parent
+    return find_compose_files(request.config.rootdir)
 
 
 @pytest.fixture(scope="session")
