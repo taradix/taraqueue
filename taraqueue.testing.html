@@ -6,14 +6,14 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>taraqueue.testing package &mdash; taraqueue 0.6.2 documentation</title>
+  <title>taraqueue.testing package &mdash; taraqueue 0.6.3 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
 
   
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=1c28bd9a"></script>
+      <script src="_static/documentation_options.js?v=b8503983"></script>
       <script src="_static/doctools.js?v=fd6eb6e6"></script>
       <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="_static/js/theme.js"></script>
@@ -98,83 +98,6 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
 </section>
-<section id="module-taraqueue.testing.compose">
-<span id="taraqueue-testing-compose-module"></span><h2>taraqueue.testing.compose module<a class="headerlink" href="#module-taraqueue.testing.compose" title="Link to this heading"></a></h2>
-<p>Compose server module.</p>
-<dl class="py class">
-<dt class="sig sig-object py" id="taraqueue.testing.compose.ComposeServer">
-<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">taraqueue.testing.compose.</span></span><span class="sig-name descname"><span class="pre">ComposeServer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pattern</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">project</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'test'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">env_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compose_files</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">180</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.compose.ComposeServer" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ProcessServer</span></code></p>
-<dl class="py method">
-<dt class="sig sig-object py" id="taraqueue.testing.compose.ComposeServer.full_name">
-<span class="sig-name descname"><span class="pre">full_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.compose.ComposeServer.full_name" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="taraqueue.testing.compose.ComposeServer.prepare_func">
-<span class="sig-name descname"><span class="pre">prepare_func</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">controldir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.compose.ComposeServer.prepare_func" title="Link to this definition"></a></dt>
-<dd><p>Prepare the function to run the compose service.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="taraqueue.testing.compose.ComposeServer.run">
-<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.compose.ComposeServer.run" title="Link to this definition"></a></dt>
-<dd><p>Return an <cite>ComposeService</cite> to the running service.</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="taraqueue.testing.compose.ComposeService">
-<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">taraqueue.testing.compose.</span></span><span class="sig-name descname"><span class="pre">ComposeService</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.compose.ComposeService" title="Link to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Compose service.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> – Name of the compose service container.</p></li>
-<li><p><strong>network</strong> – Network name to use when resolving the IP address.</p></li>
-</ul>
-</dd>
-</dl>
-<dl class="py property">
-<dt class="sig sig-object py" id="taraqueue.testing.compose.ComposeService.container">
-<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">container</span></span><a class="headerlink" href="#taraqueue.testing.compose.ComposeService.container" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="taraqueue.testing.compose.ComposeService.container_id">
-<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">container_id</span></span><a class="headerlink" href="#taraqueue.testing.compose.ComposeService.container_id" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="taraqueue.testing.compose.ComposeService.env">
-<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">env</span></span><a class="headerlink" href="#taraqueue.testing.compose.ComposeService.env" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="taraqueue.testing.compose.ComposeService.ip">
-<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">ip</span></span><a class="headerlink" href="#taraqueue.testing.compose.ComposeService.ip" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="taraqueue.testing.compose.ComposeService.name">
-<span class="sig-name descname"><span class="pre">name</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></span><a class="headerlink" href="#taraqueue.testing.compose.ComposeService.name" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="taraqueue.testing.compose.ComposeService.network">
-<span class="sig-name descname"><span class="pre">network</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#taraqueue.testing.compose.ComposeService.network" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="taraqueue.testing.compose.ComposeService.started_at">
-<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">started_at</span></span><a class="headerlink" href="#taraqueue.testing.compose.ComposeService.started_at" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-</section>
 <section id="module-taraqueue.testing.queue">
 <span id="taraqueue-testing-queue-module"></span><h2>taraqueue.testing.queue module<a class="headerlink" href="#module-taraqueue.testing.queue" title="Link to this heading"></a></h2>
 <p>Queue fixtures.</p>
@@ -220,14 +143,8 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="taraqueue.testing.services.redis_service">
-<span class="sig-prename descclassname"><span class="pre">taraqueue.testing.services.</span></span><span class="sig-name descname"><span class="pre">redis_service</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">process</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taraqueue_env_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taraqueue_compose_files</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.services.redis_service" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">taraqueue.testing.services.</span></span><span class="sig-name descname"><span class="pre">redis_service</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">process</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taraqueue_env_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.services.redis_service" title="Link to this definition"></a></dt>
 <dd><p>Redis service fixture.</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="taraqueue.testing.services.taraqueue_compose_files">
-<span class="sig-prename descclassname"><span class="pre">taraqueue.testing.services.</span></span><span class="sig-name descname"><span class="pre">taraqueue_compose_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#taraqueue.testing.services.taraqueue_compose_files" title="Link to this definition"></a></dt>
-<dd><p>Use the compose files from the project - not this library.</p>
 </dd></dl>
 
 <dl class="py function">
