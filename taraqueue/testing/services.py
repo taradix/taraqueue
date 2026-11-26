@@ -28,18 +28,12 @@ def taraqueue_env_file(taraqueue_env_vars, request):
 
 
 @pytest.fixture(scope="session")
-def taraqueue_compose_files(request):
-    """Use the compose files from the project - not this library."""
-    return find_compose_files(request.config.rootdir)
-
-
-@pytest.fixture(scope="session")
-def redis_service(process, taraqueue_env_file, taraqueue_compose_files):
+def redis_service(process, taraqueue_env_file, request):
     """Redis service fixture."""
     server = ComposeServer(
         pattern="Ready to accept connections tcp",
         env_file=taraqueue_env_file,
-        compose_files=taraqueue_compose_files,
+        compose_files=find_compose_files(request.config.rootdir),
         process=process,
     )
     with server.run("redis") as service:

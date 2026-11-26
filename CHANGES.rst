@@ -3,6 +3,8 @@ Version 0.6.3
 
 -   Add support for Python 3.15.
 -   Replace testing.compose with pytest-xdocker.
+-   Bump pytest-xdocker to 0.4.0, which starts services with compose up.
+-   Remove the taraqueue_compose_files fixture.
 
 Version 0.6.2
 -------------
