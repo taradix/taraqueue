@@ -8,7 +8,6 @@ from pytest_xdocker.compose import ComposeServer, find_compose_files
 def taraqueue_env_vars():
     """Environment variables for the services."""
     return {
-        "COMPOSE_PROJECT_NAME": "test",
         "REDIS_PASSWORD": "test",
     }
 
